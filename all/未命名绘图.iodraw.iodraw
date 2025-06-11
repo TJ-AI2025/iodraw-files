@@ -1,0 +1,13 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ioDraw.com/3.5.1 Chrome/124.0.6367.49 Electron/30.0.0 Safari/537.36" version="24.7.17">
+  <diagram name="第 1 页" id="Pv7KgIm1ls6eMyPf089u">
+    <mxGraphModel dx="794" dy="557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EtskkO8iRWeMDMreQGhp-1" value="%% 采用纵向布局的类图展示系统架构&#xa;classDiagram&#xa;    direction TB&#xa;    &#xa;    %% 定义三个核心工具集类&#xa;    class 服务器资源信息MCP工具集 {&#xa;        +查询基础规格()&#xa;        +查询系统性能(CPU/内存/硬盘)&#xa;        +查询运行状态(版本/IP/端口/进程)&#xa;    }&#xa;    &#xa;    class 电视业务告警MCP工具集 {&#xa;        +查询机顶盒软探针告警()&#xa;        +查询CDN服务器告警()&#xa;        +查询拉流告警()&#xa;    }&#xa;    &#xa;    class 电视硬探针指标MCP工具集 {&#xa;        +查询全局状态(设备数/告警设备/TOP频道)&#xa;        +查询区域维度(卡顿时长/健康度/吞吐率)&#xa;        +查询频道链路维度(卡顿时长/健康度)&#xa;    }&#xa;    &#xa;    %% 定义接口服务层&#xa;    class MCPServer接口 {&#xa;        +定义工具名称()&#xa;        +定义功能描述()&#xa;        +定义输入参数()&#xa;        +封装工具调用()&#xa;    }&#xa;    &#xa;    %% 定义错误处理机制&#xa;    class 接口调用错误处理 {&#xa;        +错误码体系()&#xa;        +JSON响应格式()&#xa;        +日志记录机制()&#xa;        +处理连接失败()&#xa;        +处理工具未找到()&#xa;        +处理输入验证错误()&#xa;        +处理超时问题()&#xa;    }&#xa;    &#xa;    %% 建立类关系&#xa;    MCPServer接口 ..&gt; 服务器资源信息MCP工具集 : 调用\n«封装»&#xa;    MCPServer接口 ..&gt; 电视业务告警MCP工具集 : 调用\n«封装»&#xa;    MCPServer接口 ..&gt; 电视硬探针指标MCP工具集 : 调用\n«封装»&#xa;    MCPServer接口 ..&gt; 接口调用错误处理 : 关联\n«错误处理»&#xa;    &#xa;    %% 添加注释说明&#xa;    note &quot;MCP协议规范：\n1. 标准化工具名称/描述/参数\n2. 确保大模型理解工具用途\n3. 支持灵活调用指标信息&quot; &#xa;        for MCPServer接口" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry width="510" height="770" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
