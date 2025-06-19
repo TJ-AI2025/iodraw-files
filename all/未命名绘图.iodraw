@@ -4,9 +4,6 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="00hyhE4xSt8xSqqlMzhC-2" value="graph TD&#xa;    A[开始分析] --&amp;gt; B[在UPF设备上进行网络抓包];&#xa;    B --&amp;gt; C[分析整体链路 ⑥ (CPE&amp;lt;&amp;gt;服务器)的通信质量];&#xa;    C --&amp;gt; D{整体链路 ⑥ 是否异常?};&#xa;    D -- 否 --&amp;gt; E[端到端网络路径正常。问题在应用层等];&#xa;    D -- 是 --&amp;gt; F[进入分段故障定位分析];&#xa;    F --&amp;gt; G{特征A: ①异常, 且②/③正常?};&#xa;    G -- 是 --&amp;gt; H[故障定位: CPE侧 (设备或空口问题)];&#xa;    G -- 否 --&amp;gt; I{特征B: ②异常, 且①/③正常?};&#xa;    I -- 是 --&amp;gt; J[故障定位: 基站侧 (设备或N3接口问题)];&#xa;    I -- 否 --&amp;gt; K{特征D: ③异常, 且①/②正常?};&#xa;    K -- 是 --&amp;gt; L[故障定位: 服务器侧 (设备或N6接口问题)];&#xa;    K -- 否 --&amp;gt; M[故障定位: UPF侧 或 复杂故障];" style="text;whiteSpace=wrap;html=1;fontColor=#393C56;" vertex="1" parent="1">
-          <mxGeometry x="210" y="490" width="320" height="210" as="geometry" />
-        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
